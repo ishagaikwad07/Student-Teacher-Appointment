@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Setup</title>
+    <script type="module">
+        import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+        import app from './firebase-init.js'
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        (async () => {
+            try {
+                const email = "admin@gmail.com";
+                const password = "admin123";
+
+                // Create admin in Firebase Authentication
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const userId = userCredential.user.uid;
+
+                // Add admin details to Firestore
+                await setDoc(doc(db, "users", userId), {
+                    email,
+                    role: "admin",
+                    firstName: "System",
+                    lastName: "Admin",
+                });
+
+                console.log("Admin account created successfully!");
+            } catch (error) {
+                console.error("Error creating admin:", error);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <h1>Admin Account Setup</h1>
+</body>
+</html>
