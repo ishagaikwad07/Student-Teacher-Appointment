@@ -24,7 +24,7 @@ To run this project, you need to have the following installed:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/ishagaikwad07/Student-Teacher-Appointment.git
     ```
 
 2. **Install Dependencies**:
@@ -86,4 +86,24 @@ To run this project, you need to have the following installed:
    - Students can send messages to teachers. Messages are stored in the Firestore database, and students can select a teacher based on the name search.
 
 ## Code Structure
+index.html - The main login page.
+firebase-init.js - Firebase configuration and initialization.
+admin-dashboard.js - Handles teacher management and student approval (for admin).
+teacher-dashboard.js - Handles appointment scheduling and approval for teachers.
+student-dashboard.js - Handles appointment booking and messaging for students.
+style.css - Styling for the pages.
+
+
+## Firebase Configuration
+
+You need to add your own Firebase configuration in the `firebase-init.js` file to interact with Firebase services like Authentication and Firestore.
+
+## Live Server
+
+If you're using VS Code, you can simply click the **"Go Live"** button in the bottom-right corner to start a local server. If you're not using VS Code, you can serve the project with any server of your choice.
+
+## Acknowledgments
+
+- Firebase for Authentication and Firestore.
+- VS Code and Live Server extension for easy development.
 
