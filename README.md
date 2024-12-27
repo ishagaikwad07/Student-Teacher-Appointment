@@ -86,12 +86,12 @@ To run this project, you need to have the following installed:
    - Students can send messages to teachers. Messages are stored in the Firestore database, and students can select a teacher based on the name search.
 
 ## Code Structure
--index.html - The main login page.
--firebase-init.js - Firebase configuration and initialization.
--admin-dashboard.js - Handles teacher management and student approval (for admin).
--teacher-dashboard.js - Handles appointment scheduling and approval for teachers.
--student-dashboard.js - Handles appointment booking and messaging for students.
--style.css - Styling for the pages.
+index.html - The main login page,
+firebase-init.js - Firebase configuration and initialization,
+admin-dashboard.js - Handles teacher management and student approval (for admin),
+teacher-dashboard.js - Handles appointment scheduling and approval for teachers,
+student-dashboard.js - Handles appointment booking and messaging for students,
+style.css - Styling for the pages.
 
 
 ## Firebase Configuration
